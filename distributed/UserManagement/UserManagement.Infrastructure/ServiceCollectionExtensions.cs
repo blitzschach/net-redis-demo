@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using UserManagement.Domain.Core.Interfaces;
 using UserManagement.Domain.Repositories;
 using UserManagement.Infrastructure.Repositories;
+using UserManagement.Infrastructure.Repositories.Cached;
 
 namespace UserManagement.Infrastructure;
 
@@ -25,7 +26,8 @@ public static class ServiceCollectionExtensions
 
         services
             .AddScoped<IUnitOfWork, UnitOfWork>()
-            .AddScoped<IUserRepository, UserRepository>();
+            .AddScoped<UserRepository>()
+            .AddScoped<IUserRepository, CachedUserRepository>();
 
         return services;
     }
