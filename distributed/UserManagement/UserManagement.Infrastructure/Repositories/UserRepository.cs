@@ -13,10 +13,10 @@ internal sealed class UserRepository()
         : this()
         => _dbContext = context;
 
-    public User Add(User entity)
+    public User Add(User user)
         => _dbContext
             .Set<User>()
-            .Add(entity).Entity;
+            .Add(user).Entity;
 
     public async Task<IEnumerable<User>> GetAllAsync(CancellationToken cancellationToken = default)
         => await _dbContext
@@ -28,8 +28,8 @@ internal sealed class UserRepository()
             .Set<User>()
             .FirstOrDefaultAsync(u => u.Id == id, cancellationToken);
 
-    public void Remove(User entity)
+    public void Remove(User user)
         => _dbContext
             .Set<User>()
-            .Remove(entity);
+            .Remove(user);
 }

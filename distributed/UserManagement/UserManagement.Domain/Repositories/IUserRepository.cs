@@ -4,11 +4,11 @@ namespace UserManagement.Domain.Repositories;
 
 public interface IUserRepository
 {
-    User Add(User entity);
+    User Add(User user);
     
     Task<IEnumerable<User>> GetAllAsync(CancellationToken cancellationToken = default);
     
     Task<User?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default);
     
-    void Remove(User entity);
+    void Remove(User user);
 }
