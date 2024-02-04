@@ -1,4 +1,5 @@
 ﻿using UserManagement.Application.Models;
+using UserManagement.Application.Services.Interfaces;
 using UserManagement.Domain.Core.Interfaces;
 using UserManagement.Domain.Entities;
 

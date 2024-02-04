@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using UserManagement.Api.Routes;
 using UserManagement.Application.Models;
-using UserManagement.Application.Services;
+using UserManagement.Application.Services.Interfaces;
 
 namespace UserManagement.Api.Endpoints;
 

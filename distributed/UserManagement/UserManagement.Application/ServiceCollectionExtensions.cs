@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using UserManagement.Application.Services;
+using UserManagement.Application.Services.Interfaces;
 
 namespace UserManagement.Application;
 

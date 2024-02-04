@@ -1,6 +1,6 @@
 ﻿using UserManagement.Application.Models;
 
-namespace UserManagement.Application.Services;
+namespace UserManagement.Application.Services.Interfaces;
 
 public interface IUserService
 {
